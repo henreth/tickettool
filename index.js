@@ -379,6 +379,7 @@ function fetchEvents(URL){
                     const eventURL = evt[7].eventURL;
                     // post new favorite event to database
                     addFavorite(eventName,eventCat,eventDate,eventTime,eventVenue,eventPrice,eventURL);
+                    event.target.style.background='#4f585e';
                 })
                 tr.appendChild(favButton);
 

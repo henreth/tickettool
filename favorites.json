@@ -19,6 +19,26 @@
       "price": "$149-$199",
       "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-01-26-2022/event/03005AA3A2BA099E",
       "id": 3
+    },
+    {
+      "name": "Come from Away",
+      "category": "Arts & Theatre",
+      "date": "January 26, 2022",
+      "time": "2:00 PM",
+      "venue": "Gerald Schoenfeld Theatre",
+      "price": "TBA",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdAbe_",
+      "id": 4
+    },
+    {
+      "name": "Music Man",
+      "category": "Arts & Theatre",
+      "date": "January 26, 2022",
+      "time": "2:00 PM",
+      "venue": "Winter Garden Theatre - NY",
+      "price": "TBA",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdA9ed",
+      "id": 7
     }
   ]
 }
