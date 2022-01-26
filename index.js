@@ -1,10 +1,3 @@
-// TO ADD:
-// 1. Sort when clicking variable headers
-// 2. Fix JSON-server and live-server error
-// 3. More details button?
-// 4. Hide Page Count when showing favorites
-
-
 // example url, never used in the script
 const ticketURL = 'https://app.ticketmaster.com/discovery/v2/events.json?size=50&postalCode=10001&apikey=ok3DYkVG6O2Y0XirYdHEGBsJSMur8l8G'
 
