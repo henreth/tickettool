@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ticket Tool</title>
+  <link rel='stylesheet/less' text='type/css' href='style.less'>
+  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+</head>
+<body>
+    <div class='main-flex'>
+        <h1 class='main-title'>Ticket Tool</h1>
+        <h2 class ='subtitle'>All the Sights and Sounds of New York City</h2>
+        <footer class = 'credits'>Developed by Henry Miller and Jonathan Laureano</footer>  
+        <div class="margin flex">
+          <h2 class='center'>Events</h4>
+            <p id='page-count'>Page: 1</p>
+            <form id='select-form' class="padding margin border-round border-grey">
+                <input type="text" id='select-keyword' placeholder="Enter Search Keywords"/>
+                <select id="select-category">
+                    <option value="">Select Category</option>
+                    <option value="KZFzniwnSyZfZ7v7nJ">Music</option>
+                    <option value="KZFzniwnSyZfZ7v7nE">Sports</option>
+                    <option value="KZFzniwnSyZfZ7v7na">Arts & Theatre</option>
+                  </select>
+                <input type="text" id='select-startdate' placeholder="Start Date" onclick=startDateValue(); />
+                <input type="text" id='select-enddate' placeholder="End Date" onclick=endDateValue(); />
+                <select id="select-size">
+                    <option value=50>Results Per Page</option>
+                    <option value=15>15</option>
+                    <option value=25>25</option>
+                    <option value=50>50</option>
+                  </select>
+                <input type="submit"/>
+              </form>
+            
+        <button id='favorites-button'class='fav-btn-off'>Show Favorites</button>
+        <button id='back-button'class='btn'>Back</button>
+        <button id='forward-button'class='btn'>Forward</button>
+        <table id='result-table' class='margin' border="1">
+            <thead id='table-head'>
+              <tr class='padding'>
+                <th class='padding center'>Favorite</th>
+                <th class='padding center'>Name</th>
+                <th class='padding center'>Category</th>
+                <th class='padding center'>Date</th>
+                <th class='padding center'>Time</th>
+                <th class='padding center'>Venue</th>
+                <th class='padding center'>Price</th>
+                <th class='padding center'>Tickets</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+<footer class = 'credits-2'>Data Provided by the Ticketmaster Developer API</footer>
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+

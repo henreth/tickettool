@@ -1,0 +1,182 @@
+// font stuff
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+
+// colour stuff
+@white: #ffffff;
+@lightBG: #dce1df;
+@salmon: #ff6666;
+
+@teal: #6675c7;
+@tealMid: #0ebac7;
+@tealContrast: #33ffff;
+@tealShade:	#007c85;
+
+@blue: #b4b8b6;;
+@pink: #f5a4a4;
+@gold: #ecbe68;
+@green: #779155;
+
+
+@darkGrey: #4f585e;
+
+.credits {
+	font-size: small;
+	text-align: center;
+}
+
+.credits-2 {
+    font-size: smaller;
+}
+
+.subtitle {
+	text-align: center;
+}
+.main-title {
+	text-align: center;
+	font-size: 70px;
+}
+.margin-flex {
+	align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+
+body {
+  background: @lightBG;
+  color: @darkGrey;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.btn {
+  background: @teal;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: @white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+}
+
+.buy-btn {
+    background: @green;
+    border-radius: 4px;
+      box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: @white;
+    display: inline-block;
+    padding: 6px 30px 8px;
+    position: relative;
+    text-decoration: none;
+      transition: all 0.1s 0s ease-out;
+  }
+
+.fav-btn-on {
+    background: @pink;
+    border-radius: 4px;
+      box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: @white;
+    display: inline-block;
+    padding: 6px 30px 8px;
+    position: relative;
+    text-decoration: none;
+      transition: all 0.1s 0s ease-out;
+  }
+
+.fav-btn-off {
+    background: @gold;
+    border-radius: 4px;
+      box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: @white;
+    display: inline-block;
+    padding: 6px 30px 8px;
+    position: relative;
+    text-decoration: none;
+      transition: all 0.1s 0s ease-out;
+  }
+
+.fav-add-btn {
+    background: @gold;
+    border-radius: 4px;
+      box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: @white;
+    display: inline-block;
+    padding: 6px 15px 6px;
+    position: relative;
+    text-decoration: none;
+      transition: all 0.1s 0s ease-out;
+  }
+
+  .fav-del-btn {
+    background: @pink;
+    border-radius: 4px;
+      box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+    color: @white;
+    display: inline-block;
+    padding: 6px 15px 6px;
+    position: relative;
+    text-decoration: none;
+      transition: all 0.1s 0s ease-out;
+  }
+
+ 
+
+.no-touch .btn:hover {
+  background: lighten(@teal,2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch .btn:active,
+.btn:active {
+  background: darken(@teal,2.5);
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+}
+
+.ticket {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center;
+  background: @white;
+
+}
+
+#table-head {
+    margin: 80px auto;
+    max-width: 960px;
+    text-align: center;
+    background: @blue;
+  
+}
+
+.card {
+  background: @white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+
+  img {
+    max-width: 300px;
+  }
+  
+  .card__image-holder {
+    background: rgba(0,0,0,0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+}
