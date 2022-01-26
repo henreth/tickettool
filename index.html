@@ -10,11 +10,10 @@
 </head>
 <body>
     <div class='main-flex'>
-        <h1 class='main-title'>Ticket Tool</h1>
+        <h1 class='main-title'>Ticket Tool 	➾ </h1>
         <h2 class ='subtitle'>All of the Sights and Sounds of New York City</h2>
         <footer class = 'credits'>Developed by Henry Miller and Jonathan Laureano</footer>  
         <div class="margin flex">
-          <h2 class='center'>Events</h4>
             <form id='select-form' class="padding margin border-round border-grey">
                 <input type="text" id='select-keyword' placeholder="Enter Search Keywords"/>
                 <select id="select-category">
@@ -38,15 +37,16 @@
         <button id='back-button'class='btn'>Back</button>
         <button id='forward-button'class='btn'>Forward</button>
         <p id='page-count'>Page: 1</p>
+        <h2 class='center'>Events</h2>
         <table id='result-table' class='margin' border="1">
             <thead id='table-head'>
               <tr class='padding'>
                 <th class='padding center'>Favorite</th>
-                <th class='padding center'>Name</th>
+                <th id='name-sort' class='padding center'>Name</th>
                 <th class='padding center'>Category</th>
-                <th class='padding center'>Date</th>
+                <th id='date-sort' class='padding center'>Date</th>
                 <th class='padding center'>Time</th>
-                <th class='padding center'>Venue</th>
+                <th id='venue-sort' class='padding center'>Venue</th>
                 <th class='padding center'>Price</th>
                 <th class='padding center'>Tickets</th>
               </tr>

@@ -83,6 +83,7 @@ function selectEndDate(url) {
     }
 }
 
+
 // creates and returns url with supplied inputs
 function createUrl() {
     const sizedURL = selectSize(baseURL,pageCount);
@@ -97,6 +98,234 @@ function createUrl() {
 
     return endURL+'&dmaId=345&sort=date,asc'+apiKey;
 
+}
+
+//sorting by selected columns
+const nameCol = document.getElementById('name-sort');
+const dateCol = document.getElementById('date-sort');
+const venueCol = document.getElementById('venue-sort');
+
+let nameColPlaceHolder = 'Name';
+let dateColPlaceHolder = 'Date';
+let venueColPlaceHolder = 'Venue';
+
+
+//variables needed to determine what kind of sorting
+//global sorting variable determines if there the fetch is being sorted already
+let globalSorted = null;
+let placeholderGlobalSorted = null;
+
+//individual sorting variables to determine asc or desc
+let nameSorted = 0;
+let dateSorted = 0;
+let venueSorted =0;
+
+//sort by name
+nameCol.addEventListener('click',()=>{
+    //reset page count
+    pageCount=0;
+    // check the global sorting variable
+    if(globalSorted==='name'){
+        // check the column sorting variable
+        if (nameSorted===1){
+            //update column text and sorting variable
+            nameCol.textContent='Name↓';
+            nameColPlaceHolder=nameCol.textContent;
+            nameSorted+=1;
+            //remove all existing results
+            clearScreen();
+            //create string to update url for sorting
+            const sortText = 'sort=name,desc';
+            // fetch and display new sorted results
+            fetchEvents(createSortedUrl(sortText));    
+        } else if (nameSorted===2){
+            //reset column text and sorting variable
+            nameCol.textContent='Name';
+            nameColPlaceHolder=nameCol.textContent;
+            nameSorted=0;
+            //remove all results
+            clearScreen();
+            //fetch default results
+            fetchEvents(createUrl());
+            //reset global sorting variable
+            globalSorted=null;
+            placeholderGlobalSorted = null;    
+        }    
+    } else if (globalSorted==='favorites') {
+
+    }else{
+        //reset all variable counts
+        nameSorted = 0;
+        dateSorted = 0;
+        venueSorted =0;
+
+        //reset all column names
+        nameCol.textContent='Name';
+        nameColPlaceHolder=nameCol.textContent;
+        dateCol.textContent='Date';
+        dateColPlaceHolder=dateCol.textContent
+        venueCol.textContent='Venue';
+        venueColPlaceHolder=venueCol.textContent
+
+        //update column text and sorting variable
+        nameCol.textContent='Name↑';
+        nameColPlaceHolder=nameCol.textContent
+        nameSorted+=1;
+        //update global sorting variable
+        globalSorted='name';
+        placeholderGlobalSorted = 'name'
+        // remove all existings results
+        clearScreen();
+        // create string to update url for sorting
+        const sortText = 'sort=name,asc';
+        // fetch and display new sorted results
+        fetchEvents(createSortedUrl(sortText));    
+    }
+})
+
+
+//sort by date
+dateCol.addEventListener('click',()=>{
+    //reset page count
+    pageCount=0;
+    // check the global sorting variable
+    if(globalSorted==='date'){
+        // check the column sorting variable
+        if (dateSorted===1){
+            //update column text and sorting variable
+            dateCol.textContent='Date↓';
+            dateColPlaceHolder=dateCol.textContent;
+            dateSorted+=1;
+            //remove all existing results
+            clearScreen();
+            //create string to update url for sorting
+            const sortText = 'sort=date,desc';
+            // fetch and display new sorted results
+            fetchEvents(createSortedUrl(sortText));    
+        } else if (dateSorted===2){
+            //reset column text and sorting variable
+            dateCol.textContent='Date';
+            dateColPlaceHolder=dateCol.textContent;
+
+            dateSorted=0;
+            //remove all results
+            clearScreen();
+            //fetch default results
+            fetchEvents(createUrl());
+            //reset global sorting variable
+            globalSorted=null;
+            placeholderGlobalSorted = null;        
+        }    
+    }else if (globalSorted==='favorites'){
+
+    } else{
+        //reset all variable counts
+        nameSorted = 0;
+        dateSorted = 0;
+        venueSorted =0;
+
+        //reset all column names
+        nameCol.textContent='Name';
+        nameColPlaceHolder=nameCol.textContent;
+        dateCol.textContent='Date';
+        dateColPlaceHolder=dateCol.textContent;
+        venueCol.textContent='Venue';
+        venueColPlaceHolder=venueCol.textContent;
+
+        //update column text and sorting variable
+        dateCol.textContent='Date↑';
+        dateColPlaceHolder=dateCol.textContent;
+        dateSorted+=1;
+        //update global sorting variable
+        globalSorted='date';
+        placeholderGlobalSorted = 'date';    
+
+        // remove all existings results
+        clearScreen();
+        // create string to update url for sorting
+        const sortText = 'sort=date,asc';
+        // fetch and display new sorted results
+        fetchEvents(createSortedUrl(sortText));    
+    }
+})
+
+//sort by venue
+venueCol.addEventListener('click',()=>{
+    //reset page count
+    pageCount=0;
+    // check the global sorting variable
+    if(globalSorted==='venue'){
+        // check the column sorting variable
+        if (venueSorted===1){
+            //update column text and sorting variable
+            venueCol.textContent='Venue↓';
+            venueColPlaceHolder=venueCol.textContent;
+            venueSorted+=1;
+            //remove all existing results
+            clearScreen();
+            //create string to update url for sorting
+            const sortText = 'sort=venueName,desc';
+            // fetch and display new sorted results
+            fetchEvents(createSortedUrl(sortText));    
+        } else if (venueSorted===2){
+            //reset column text and sorting variable
+            venueCol.textContent='Venue';
+            venueColPlaceHolder=venueCol.textContent;
+            venueSorted=0;
+            //remove all results
+            clearScreen();
+            //fetch default results
+            fetchEvents(createUrl());
+            //reset global sorting variable
+            globalSorted=null;   
+            placeholderGlobalSorted = null;     
+        }    
+    }else if (globalSorted==='favorites') {
+
+    } else{
+        //reset all variable counts
+        nameSorted = 0;
+        dateSorted = 0;
+        venueSorted =0;
+
+        //reset all column names
+        nameCol.textContent='Name';
+        nameColPlaceHolder=nameCol.textContent;
+        dateCol.textContent='Date';
+        dateColPlaceHolder=dateCol.textContent;
+        venueCol.textContent='Venue';
+        venueColPlaceHolder=venueCol.textContent;
+
+        //update column text and sorting variable
+        venueCol.textContent='Venue↑';
+        venueColPlaceHolder=venueCol.textContent;
+        venueSorted+=1;
+        //update global sorting variable
+        globalSorted='venue';
+        placeholderGlobalSorted = 'venue';    
+        // remove all existings results
+        clearScreen();
+        // create string to update url for sorting
+        const sortText = 'sort=venueName,asc';
+        // fetch and display new sorted results
+        fetchEvents(createSortedUrl(sortText));    
+    }
+})
+
+
+//create new url to fetch data provided in the specified sorting arrangement
+function createSortedUrl (sortText) {
+    const sizedURL = selectSize(baseURL,pageCount);
+
+    const cateURL = selectCategory(sizedURL);
+
+    const keyURL = selectKeyWords(cateURL);
+
+    const startURL = selectStartDate(keyURL);
+
+    const endURL = selectEndDate(startURL);
+
+    return endURL+'&dmaId=345&'+sortText+apiKey;
 }
 
 // gets the input form for desired search filters
@@ -345,8 +574,8 @@ backButton.addEventListener('click',()=>{
         const tableBody = document.createElement('tbody');
         tableBody.id='table-body';
         ticketTable.appendChild(tableBody);
-        //update page count and display on screen
 
+        //update page count and display on screen
         pageCount--;
         pageCountText.textContent=`Page: ${pageCount+1}`;
 
@@ -432,12 +661,16 @@ const toggleSelects = () => {
   }
 
 //changes the state of the back and forwards buttons when ran
-const toggelButtons = () => {
+const toggleButtons = () => {
     backButton.disabled=!backButton.disabled;
     forwardButton.disabled=!forwardButton.disabled;
 }
 
-// display favorites
+const togglePageCount = () => {
+    document.getElementById('page-count').className='hidden'
+}
+
+// fetch events from favorites database and display 
 const favURL = 'http://localhost:3000/favorites'
 
 function fetchFavorites(){
@@ -514,6 +747,7 @@ const showFavoritesButton = document.getElementById('favorites-button');
 let favsOnDisplay = false;
 // event listener to change viewing status
 showFavoritesButton.addEventListener('click',()=>{
+    console.log(placeholderGlobalSorted);
     // if the favorites are not being displayed
     if (favsOnDisplay===false) {
         // clear the dispay
@@ -525,9 +759,18 @@ showFavoritesButton.addEventListener('click',()=>{
         showFavoritesButton.className='fav-btn-on'
 
         // disable all inputs and buttons 
-        toggelButtons();
+        toggleButtons();
         toggleInputs();
         toggleSelects();
+        //remove page count from the screen
+        document.getElementById('page-count').className='hidden'
+
+        //restict columns from sorting 
+        globalSorted='favorites';
+        //revert changes to column names
+        nameCol.textContent='Name';
+        dateCol.textContent='Date';
+        venueCol.textContent='Venue';
 
         //add favorites to the display
         const ticketTable= document.getElementById('result-table');
@@ -536,20 +779,28 @@ showFavoritesButton.addEventListener('click',()=>{
         ticketTable.appendChild(newTableBody);
         fetchFavorites(favURL);
 
-        
     } else {
         // clear the display
         const resultBar = document.getElementById('table-body');
         resultBar.remove();
         //Update button
-        favsOnDisplay=false
-        showFavoritesButton.textContent='Show Favorites'
-        showFavoritesButton.className='fav-btn-off'
+        favsOnDisplay=false;
+        showFavoritesButton.textContent='Show Favorites';
+        showFavoritesButton.className='fav-btn-off';
 
         // enable all inputs and buttons 
-        toggelButtons();
+        toggleButtons();
         toggleInputs();
         toggleSelects();
+        document.getElementById('page-count').className='';
+
+        //enable columns for sorting 
+        globalSorted=placeholderGlobalSorted
+        //revert changes to columns
+        nameCol.textContent=nameColPlaceHolder;
+        dateCol.textContent=dateColPlaceHolder;
+        venueCol.textContent=venueColPlaceHolder;
+
 
         //add all events to the display
         const ticketTable= document.getElementById('result-table');
@@ -617,4 +868,16 @@ function addFavorite (tName,tCat,tDate,tTime,tVenue,tPrice,tURL) {
         });
   }
   
+//remove all results from the screen
+const clearScreen = () => {
+    const resultBar = document.getElementById('table-body');
+    resultBar.remove();
+
+    //create new table body element to add new results to
+    const ticketTable= document.getElementById('result-table');
+    const tableBody = document.createElement('tbody');
+    tableBody.id='table-body';
+    ticketTable.appendChild(tableBody);
+
+}
   

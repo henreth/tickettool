@@ -30,6 +30,7 @@
 
 .credits-2 {
     font-size: smaller;
+    text-align: center;
 }
 
 .subtitle {
@@ -48,6 +49,17 @@
     flex-wrap: wrap;
 }
 
+.margin {
+	align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+.center {
+	text-align: center;
+}
 
 body {
   background: @lightBG;
@@ -71,6 +83,13 @@ body {
   
 }
 
+.btn:hover {
+    background: lighten(@teal,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+}
+
 .buy-btn {
     background: @green;
     border-radius: 4px;
@@ -85,10 +104,17 @@ body {
       text-rendering: optimizeLegibility;
     
   }
+
+  .buy-btn:hover {
+    background: lighten(@green,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+  }
   #page-count{
     display: inline-block;
-    width: 50%;
-    height: 100%;
+    width: 4%;
+    height: 80%;
     background: @BG2;
     border-radius: 4px;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
@@ -96,9 +122,9 @@ body {
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
-      transition: all 0.1s 0s ease-out;
-      font-family: 'Source Sans Pro', sans-serif;
-      text-rendering: optimizeLegibility;
+    transition: all 0.1s 0s ease-out;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility;
     
 }
 
@@ -107,7 +133,7 @@ body {
     border-radius: 4px;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
     color: @white;
-    padding: 6px 30px 8px;
+    padding: 6px 110px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
@@ -215,6 +241,13 @@ body {
     
   }
 
+  .fav-btn-on:hover {
+    background: lighten(@pink,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+  }
+
 .fav-btn-off {
     background: @gold;
     border-radius: 4px;
@@ -229,6 +262,14 @@ body {
       text-rendering: optimizeLegibility;
     
   }
+
+  .fav-btn-off:hover {
+    background: lighten(@gold,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+  }
+
 
 .fav-add-btn {
     background: @gold;
@@ -245,6 +286,13 @@ body {
     
   }
 
+  .fav-add-btn:hover {
+    background: lighten(@gold,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+  }
+
   .fav-del-btn {
     background: @pink;
     border-radius: 4px;
@@ -258,6 +306,13 @@ body {
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
     
+  }
+
+  .fav-del-btn:hover {
+    background: lighten(@pink,2.5);
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
   }
 
  
@@ -293,26 +348,10 @@ body {
   
 }
 
-.card {
-  background: @white;
-  display: inline-block;
-  margin: 8px;
-  max-width: 300px;
-  perspective: 1000;
-  position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  width: 300px;
-  z-index: 1;
+.hidden {
+    visibility: hidden;
+}
 
-  img {
-    max-width: 300px;
-  }
-  
-  .card__image-holder {
-    background: rgba(0,0,0,0.1);
-    height: 0;
-    padding-bottom: 75%;
-  }
-
+.sorted-1 {
+    background: darken(@teal,2.5);
 }
