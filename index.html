@@ -15,7 +15,6 @@
         <footer class = 'credits'>Developed by Henry Miller and Jonathan Laureano</footer>  
         <div class="margin flex">
           <h2 class='center'>Events</h4>
-            <p id='page-count'>Page: 1</p>
             <form id='select-form' class="padding margin border-round border-grey">
                 <input type="text" id='select-keyword' placeholder="Enter Search Keywords"/>
                 <select id="select-category">
@@ -32,12 +31,13 @@
                     <option value=25>25</option>
                     <option value=50>50</option>
                   </select>
-                <input type="submit"/>
+                <input type="submit" id='select-submit'/>
               </form>
             
         <button id='favorites-button'class='fav-btn-off'>Show Favorites</button>
         <button id='back-button'class='btn'>Back</button>
         <button id='forward-button'class='btn'>Forward</button>
+        <p id='page-count'>Page: 1</p>
         <table id='result-table' class='margin' border="1">
             <thead id='table-head'>
               <tr class='padding'>
