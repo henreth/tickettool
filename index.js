@@ -76,7 +76,7 @@ function selectEndDate(url) {
     }
 }
 
-// creates and returns url with the supplied inputs
+// creates and returns url with supplied inputs
 function createUrl() {
     const sizedURL = selectSize(baseURL,pageCount);
 
@@ -149,12 +149,11 @@ function fetchEvents(URL){
                     const eventVenue = evt[5].textContent;
                     const eventPrice = evt[6].textContent;
                     const eventURL = evt[7].eventURL;
-
+                    // post new favorite event to database
                     addFavorite(eventName,eventCat,eventDate,eventTime,eventVenue,eventPrice,eventURL);
                 })
                 tr.appendChild(favButton);
 
-        
                 //create name element for ticket element 
                 const name = document.createElement('td');
                 name.textContent=ticket.name;
@@ -267,12 +266,12 @@ function fetchEvents(URL){
                     }
                 tr.appendChild(priceRange);
                 
-                // Create favorite button to add event to the list of favorites
+                // Create buy button to open website to buy tickets upon click
                 const buyButton = document.createElement('button');
                 buyButton.className='buy-btn'
                 buyButton.textContent='Buy';
                 buyButton.eventURL = ticket.url;
-                // add event listener to add ticket information to database
+                // add event listener to open new window 
                 buyButton.addEventListener('click',()=> {
                     window.open(ticket.url);
                 })
@@ -410,6 +409,7 @@ const pageCountLength = (count) =>{
     }   
 }
 
+//changes the state of input forms when ran
 const toggleInputs = () => {
     const inputs = document.getElementsByTagName('input');
     for (const input of inputs) {
@@ -417,6 +417,7 @@ const toggleInputs = () => {
     }
   }
 
+//changes the state of select forms when ran
 const toggleSelects = () => {
     const selects = document.getElementsByTagName('select');
     for (const select of selects) {
@@ -424,6 +425,7 @@ const toggleSelects = () => {
     }
   }
 
+//changes the state of the back and forwards buttons when ran
 const toggelButtons = () => {
     backButton.disabled=!backButton.disabled;
     forwardButton.disabled=!forwardButton.disabled;
@@ -452,10 +454,14 @@ function fetchFavorites(){
                 favButton.className='fav-del-btn'
                 favButton.textContent='X';
                 favButton.addEventListener('click',()=>{
+                    //removes event from display
                     tr.remove();
+                    //removes favorite from database
                     removeFavorite(ticket.id);
                 })
                 tr.appendChild(favButton);
+
+                //add and display all event information
                 
                 const favTicketName = document.createElement('td');
                 favTicketName.textContent = ticket.name;
@@ -502,8 +508,9 @@ const showFavoritesButton = document.getElementById('favorites-button');
 let favsOnDisplay = false;
 // event listener to change viewing status
 showFavoritesButton.addEventListener('click',()=>{
-    // if the favorites are not being displayedj
+    // if the favorites are not being displayed
     if (favsOnDisplay===false) {
+        // clear the dispay
         const resultBar = document.getElementById('table-body');
         resultBar.remove();
         //update button
@@ -516,7 +523,7 @@ showFavoritesButton.addEventListener('click',()=>{
         toggleInputs();
         toggleSelects();
 
-        //
+        //add favorites to the display
         const ticketTable= document.getElementById('result-table');
         const newTableBody = document.createElement('tbody');
         newTableBody.id='table-body';
@@ -525,6 +532,7 @@ showFavoritesButton.addEventListener('click',()=>{
 
         
     } else {
+        // clear the display
         const resultBar = document.getElementById('table-body');
         resultBar.remove();
         //Update button
@@ -532,12 +540,12 @@ showFavoritesButton.addEventListener('click',()=>{
         showFavoritesButton.textContent='Show Favorites'
         showFavoritesButton.className='fav-btn-off'
 
-        // disable all inputs and buttons 
+        // enable all inputs and buttons 
         toggelButtons();
         toggleInputs();
         toggleSelects();
 
-        //
+        //add all events to the display
         const ticketTable= document.getElementById('result-table');
         const newTableBody = document.createElement('tbody');
         newTableBody.id='table-body';
@@ -547,7 +555,7 @@ showFavoritesButton.addEventListener('click',()=>{
     }
 })
 
-
+// post new favorite event to database
 function addFavorite (tName,tCat,tDate,tTime,tVenue,tPrice,tURL) {
     const formData = {
         name: tName,
@@ -580,7 +588,7 @@ function addFavorite (tName,tCat,tDate,tTime,tVenue,tPrice,tURL) {
         });
   }
 
-
+// remove selected event from the favorites database
   function removeFavorite (tId) {
     const delURL = favURL+'/'+tId;
     const configurationObject = {

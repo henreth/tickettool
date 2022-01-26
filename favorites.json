@@ -1,34 +1,34 @@
 {
   "favorites": [
     {
-      "id": 2,
-      "name": "Hamilton (NY)",
-      "category": "Arts & Theatre",
-      "date": "January 25, 2022",
-      "time": "7:00 PM",
-      "venue": "Richard Rodgers Theatre",
-      "price": "$149-$199",
-      "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-01-25-2022/event/03005AA3A2BA098B"
-    },
-    {
-      "name": "Brooklyn Nets vs. New York Knicks",
+      "name": "Long Island Nets vs. Cleveland Charge",
       "category": "Sports",
-      "date": "March 13, 2022",
-      "time": "12:00 AM",
-      "venue": "Barclays Center",
-      "price": "TBA",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdFUjw",
-      "id": 3
+      "date": "February 4, 2022",
+      "time": "7:00 PM",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "price": "$18-$500",
+      "url": "https://www.ticketmaster.com/long-island-nets-vs-cleveland-charge-uniondale-new-york-02-04-2022/event/00005B56F70F821E",
+      "id": 1
     },
     {
-      "name": "Cricket's Candy Creations",
-      "category": "Miscellaneous",
-      "date": "January 26, 2022",
-      "time": "1:00 PM",
-      "venue": "Cricket's Candy Creations",
-      "price": "TBA",
-      "url": "https://www.universe.com/events/crickets-candy-creations-tickets-K7QDCV?ref=ticketmaster",
-      "id": 4
+      "name": "Long Island Nets vs. Cleveland Charge",
+      "category": "Sports",
+      "date": "February 2, 2022",
+      "time": "7:00 PM",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "price": "$18-$500",
+      "url": "https://www.ticketmaster.com/long-island-nets-vs-cleveland-charge-uniondale-new-york-02-02-2022/event/00005B56F70D821C",
+      "id": 2
+    },
+    {
+      "name": "Long Island Nets vs. Motor City Cruise",
+      "category": "Sports",
+      "date": "February 27, 2022",
+      "time": "6:00 PM",
+      "venue": "Nassau Veterans Memorial Coliseum",
+      "price": "$18-$500",
+      "url": "https://www.ticketmaster.com/long-island-nets-vs-motor-city-uniondale-new-york-02-27-2022/event/00005B56F7138223",
+      "id": 3
     }
   ]
 }
