@@ -3,22 +3,22 @@
     {
       "name": "Long Island Nets vs. Cleveland Charge",
       "category": "Sports",
-      "date": "February 4, 2022",
-      "time": "7:00 PM",
-      "venue": "Nassau Veterans Memorial Coliseum",
-      "price": "$18-$500",
-      "url": "https://www.ticketmaster.com/long-island-nets-vs-cleveland-charge-uniondale-new-york-02-04-2022/event/00005B56F70F821E",
-      "id": 1
-    },
-    {
-      "name": "Long Island Nets vs. Cleveland Charge",
-      "category": "Sports",
       "date": "February 2, 2022",
       "time": "7:00 PM",
       "venue": "Nassau Veterans Memorial Coliseum",
       "price": "$18-$500",
       "url": "https://www.ticketmaster.com/long-island-nets-vs-cleveland-charge-uniondale-new-york-02-02-2022/event/00005B56F70D821C",
       "id": 2
+    },
+    {
+      "name": "Hamilton (NY)",
+      "category": "Arts & Theatre",
+      "date": "January 26, 2022",
+      "time": "2:00 PM",
+      "venue": "Richard Rodgers Theatre",
+      "price": "$149-$199",
+      "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-01-26-2022/event/03005AA3A2BA099E",
+      "id": 3
     }
   ]
 }

@@ -1,8 +1,8 @@
-// font stuff
+// font
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 
 
-// colour stuff
+// colors
 @white: #ffffff;
 @lightBG: #dce1df;
 @salmon: #ff6666;
@@ -19,18 +19,18 @@
 
 @BG2: #b6b8b7;
 
-
-
 @darkGrey: #4f585e;
 
 .credits {
 	font-size: small;
 	text-align: center;
+    padding-bottom: 10px;
 }
 
 .credits-2 {
     font-size: smaller;
     text-align: center;
+    padding-top: 10px
 }
 
 .subtitle {
@@ -57,8 +57,25 @@
     flex-wrap: wrap;
 }
 
-.center {
-	text-align: center;
+#space-before-buttons {
+    text-align: right;
+    display: inline-block;
+    padding-left : 73px;
+    color: @lightBG;
+}
+
+#space-before-inputs {
+    text-align: right;
+    display: inline-block;
+    padding-left : 70px;
+    color: @lightBG;
+}
+
+
+#events-center {
+	text-align: right;
+    display: inline-block;
+    padding-left : 104px;
 }
 
 body {
@@ -105,13 +122,14 @@ body {
     
   }
 
-  .buy-btn:hover {
+.buy-btn:hover {
     background: lighten(@green,2.5);
     box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
     transform: translateY(-2px);
     transition: all 0.25s 0s ease-out;
   }
-  #page-count{
+
+#page-count{
     display: inline-block;
     width: 4%;
     height: 80%;
@@ -133,100 +151,83 @@ body {
     border-radius: 4px;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
     color: @white;
-    padding: 6px 110px 8px;
+    padding: 2px 110px 14px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-keyword {
     background: @white;
     border-radius: 4px;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-category {
     background: @white;
     border-radius: 5px;
-    //   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-startdate {
     background: @white;
     border-radius: 4px;
-    //   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-enddate {
     background: @white;
     border-radius: 4px;
-    //   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-size {
     background: @white;
     border-radius: 5px;
-    //   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   #select-submit {
     background: @white;
     border-radius: 4px;
-    //   box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-    // color: @white;
     padding: 6px 30px 8px;
     position: relative;
     text-decoration: none;
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
 .fav-btn-on {
+    padding-left: 200px;
     background: @pink;
     border-radius: 4px;
       box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
@@ -238,10 +239,9 @@ body {
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
-  .fav-btn-on:hover {
+.fav-btn-on:hover {
     background: lighten(@pink,2.5);
     box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
     transform: translateY(-2px);
@@ -263,7 +263,7 @@ body {
     
   }
 
-  .fav-btn-off:hover {
+.fav-btn-off:hover {
     background: lighten(@gold,2.5);
     box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
     transform: translateY(-2px);
@@ -283,7 +283,6 @@ body {
       transition: all 0.1s 0s ease-out;
       font-family: 'Source Sans Pro', sans-serif;
       text-rendering: optimizeLegibility;
-    
   }
 
   .fav-add-btn:hover {
@@ -308,7 +307,7 @@ body {
     
   }
 
-  .fav-del-btn:hover {
+.fav-del-btn:hover {
     background: lighten(@pink,2.5);
     box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
     transform: translateY(-2px);
@@ -337,7 +336,6 @@ body {
   max-width: 960px;
   text-align: center;
   background: @white;
-
 }
 
 #table-head {
@@ -345,13 +343,8 @@ body {
     max-width: 960px;
     text-align: center;
     background: @blue;
-  
 }
 
 .hidden {
     visibility: hidden;
-}
-
-.sorted-1 {
-    background: darken(@teal,2.5);
 }
