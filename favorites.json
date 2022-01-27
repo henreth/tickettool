@@ -1,44 +1,94 @@
 {
   "favorites": [
     {
-      "name": "Long Island Nets vs. Cleveland Charge",
-      "category": "Sports",
-      "date": "February 2, 2022",
-      "time": "7:00 PM",
-      "venue": "Nassau Veterans Memorial Coliseum",
-      "price": "$18-$500",
-      "url": "https://www.ticketmaster.com/long-island-nets-vs-cleveland-charge-uniondale-new-york-02-02-2022/event/00005B56F70D821C",
-      "id": 2
+      "name": "Michelle Obama",
+      "category": "Miscellaneous",
+      "date": "December 20, 2025",
+      "time": "8:00 PM",
+      "venue": "Barclays Center",
+      "price": "TBA",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdvUrk",
+      "id": 3
     },
     {
-      "name": "Come from Away",
-      "category": "Arts & Theatre",
-      "date": "January 26, 2022",
-      "time": "2:00 PM",
-      "venue": "Gerald Schoenfeld Theatre",
+      "name": "Brooklyn Nets vs. New York Knicks",
+      "category": "Sports",
+      "date": "March 13, 2022",
+      "time": "12:00 AM",
+      "venue": "Barclays Center",
       "price": "TBA",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdAbe_",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdFUjw",
       "id": 4
     },
     {
-      "name": "Music Man",
+      "name": "New York Knicks vs. Brooklyn Nets",
+      "category": "Sports",
+      "date": "April 6, 2022",
+      "time": "6:30 PM",
+      "venue": "Madison Square Garden",
+      "price": "$166-$8464.5",
+      "url": "https://www.ticketmaster.com/new-york-knicks-vs-brooklyn-nets-new-york-new-york-04-06-2022/event/3B005B15AC7C12C2",
+      "id": 5
+    },
+    {
+      "name": "Hamilton (NY)",
       "category": "Arts & Theatre",
-      "date": "January 26, 2022",
-      "time": "2:00 PM",
-      "venue": "Winter Garden Theatre - NY",
-      "price": "TBA",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdA9ed",
+      "date": "February 11, 2022",
+      "time": "8:00 PM",
+      "venue": "Richard Rodgers Theatre",
+      "price": "$159-$249",
+      "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-02-11-2022/event/03005AA3A45D38B1",
+      "id": 6
+    },
+    {
+      "name": "Hamilton (NY)",
+      "category": "Arts & Theatre",
+      "date": "February 17, 2022",
+      "time": "7:00 PM",
+      "venue": "Richard Rodgers Theatre",
+      "price": "$149-$199",
+      "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-02-17-2022/event/03005AA3A2BF0A7A",
       "id": 7
     },
     {
-      "name": "Cricket's Candy Creations",
-      "category": "Miscellaneous",
-      "date": "January 26, 2022",
-      "time": "1:00 PM",
-      "venue": "Cricket's Candy Creations",
-      "price": "TBA",
-      "url": "https://www.universe.com/events/crickets-candy-creations-tickets-K7QDCV?ref=ticketmaster",
+      "name": "Hamilton (NY)",
+      "category": "Arts & Theatre",
+      "date": "February 20, 2022",
+      "time": "3:00 PM",
+      "venue": "Richard Rodgers Theatre",
+      "price": "$159-$249",
+      "url": "https://www.ticketmaster.com/hamilton-ny-new-york-new-york-02-20-2022/event/03005AA3A45F38BF",
       "id": 8
+    },
+    {
+      "name": "The Lizards",
+      "category": "Music",
+      "date": "January 29, 2022",
+      "time": "9:00 PM",
+      "venue": "XL Live",
+      "price": "$15",
+      "url": "https://www.ticketmaster.com/the-lizards-harrisburg-pennsylvania-01-29-2022/event/02005B8D261173B0",
+      "id": 9
+    },
+    {
+      "name": "Still Woozy",
+      "category": "Music",
+      "date": "February 2, 2022",
+      "time": "8:00 PM",
+      "venue": "Brooklyn Steel",
+      "price": "TBA",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1Adk8_S",
+      "id": 10
+    },
+    {
+      "name": "Metropolitan Opera",
+      "category": "Arts & Theatre",
+      "date": "January 29, 2022",
+      "time": "8:30 PM",
+      "venue": "Metropolitan Opera House",
+      "price": "TBA",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1AdFs8V",
+      "id": 11
     }
   ]
 }

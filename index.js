@@ -386,6 +386,7 @@ function fetchEvents(URL){
                 //create name element for ticket element 
                 const name = document.createElement('td');
                 name.textContent=ticket.name;
+                name.className='ticket-var'
                 tr.appendChild(name);
 
                 //create category element for ticket element that if undefined, is set as misc
@@ -395,6 +396,7 @@ function fetchEvents(URL){
                 } else {
                     category.textContent=ticket['_embedded'].attractions[0].classifications[0].segment.name;
                 }
+                category.className='ticket-cat';
                 tr.appendChild(category);
                 
                 //creates date element for ticket element that provides the date of the event in an easily readable format
@@ -415,6 +417,7 @@ function fetchEvents(URL){
                     let dateMsg = `${monthNames[month]} ${day}, ${year}`;
                     dateTime.textContent=dateMsg;
                 }
+                dateTime.className='ticket-date';
                 tr.appendChild(dateTime);
 
                 //creates time element for ticket element that provides the date of the event in an easily readable format
@@ -471,11 +474,13 @@ function fetchEvents(URL){
                          }
                         }
                 }
+                time.className='ticket-time';
                 tr.appendChild(time);
 
                 // create venue element for ticket element and display
                 const venue = document.createElement('td');
                 venue.textContent=ticket['_embedded'].venues[0].name;
+                category.className='ticket-ven';
                 tr.appendChild(venue);
 
                 //create price element for ticket element and display
@@ -698,22 +703,27 @@ function fetchFavorites(){
                 
                 const favTicketName = document.createElement('td');
                 favTicketName.textContent = ticket.name;
+                favTicketName.className='ticket-var';
                 tr.appendChild(favTicketName);
 
                 const favTicketCategory = document.createElement('td');
                 favTicketCategory.textContent = ticket.category;
+                favTicketCategory.className='ticket-cat';
                 tr.appendChild(favTicketCategory);
 
                 const favTicketDate = document.createElement('td');
                 favTicketDate.textContent = ticket.date;
+                favTicketDate.className='ticket-date';
                 tr.appendChild(favTicketDate);
 
                 const favTicketTime = document.createElement('td');
                 favTicketTime.textContent = ticket.time;
+                favTicketTime.className='ticket-time';
                 tr.appendChild(favTicketTime);
 
                 const favTicketVenue = document.createElement('td');
                 favTicketVenue.textContent = ticket.venue;
+                favTicketVenue.className='ticket-ven';
                 tr.appendChild(favTicketVenue);
 
                 const favTicketPrice = document.createElement('td');
