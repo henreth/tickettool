@@ -758,6 +758,8 @@ showFavoritesButton.addEventListener('click',()=>{
         toggleSelects();
         //remove page count from the screen
         document.getElementById('page-count').className='hidden'
+        //disable hover event for submit button
+        document.getElementById('select-submit-button').className='';
 
         //restict columns from sorting 
         globalSorted='favorites';
@@ -787,6 +789,9 @@ showFavoritesButton.addEventListener('click',()=>{
         toggleInputs();
         toggleSelects();
         document.getElementById('page-count').className='';
+        //renable hover event for submit button
+        document.getElementById('select-submit-button').className='select-submit';
+
 
         //enable columns for sorting 
         globalSorted=placeholderGlobalSorted
