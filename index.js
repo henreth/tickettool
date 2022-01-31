@@ -1,6 +1,3 @@
-// example url, never used in the script
-const ticketURL = 'https://app.ticketmaster.com/discovery/v2/events.json?size=50&postalCode=10001&apikey=ok3DYkVG6O2Y0XirYdHEGBsJSMur8l8G'
-
 //needed for query validation on ticketmaster
 const apiKey = '&apikey=ok3DYkVG6O2Y0XirYdHEGBsJSMur8l8G';
 // stores current page count
@@ -10,12 +7,12 @@ let pageCountText = document.getElementById('page-count');
 
 
 // base url used in fetch events, is later added to 
-const baseURL ='https://app.ticketmaster.com/discovery/v2/events.json?'
+const baseURL ='https://app.ticketmaster.com/discovery/v2/events.json?';
 //store previously used url in this empty string for use in changing the page number
-let lastURL = ''
+let lastURL = '';
 
 
-// automatically runs the first fetcho when the user loads in
+// automatically runs the first fetch when the user loads in
 fetchEvents(createUrl());
 
 /// The folowing functions are used in the createURL function that crafts the URL that will be used to fetch results
@@ -90,7 +87,6 @@ function createUrl() {
     const endURL = selectEndDate(startURL);
 
     return endURL+'&dmaId=345&sort=date,asc'+apiKey;
-
 }
 
 //sorting by selected columns
