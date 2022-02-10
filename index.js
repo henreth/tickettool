@@ -1,5 +1,5 @@
 //needed for query validation on ticketmaster
-const apiKey = '&apikey=ok3DYkVG6O2Y0XirYdHEGBsJSMur8l8G';
+const apiKey = '&apikey=[YOURAPIKEYHERE]';
 // stores current page count
 let pageCount = 0;
 // gets the pagecount displayed on the screen
